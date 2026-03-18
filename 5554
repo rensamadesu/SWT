@@ -1,0 +1,10 @@
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+total_time = a + b + c + d
+total_min = total_time // 60 # 나누기는 항상 float으로 출력 -> //으로 하면 int
+total_sec = total_time % 60 
+int(total_min)
+print(total_min)
+print(total_sec)
