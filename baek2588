@@ -1,0 +1,12 @@
+a = list(map(int, input()))
+b = list(map(int, input()))
+# 단위별 출력물
+Line_3 = ((a[0]*100)+(a[1]*10)+(a[2]))*(b[2])
+print (Line_3)
+Line_4 = ((a[0]*100)+(a[1]*10)+(a[2]))*(b[1])
+print (Line_4)
+Line_5 = ((a[0]*100)+(a[1]*10)+(a[2]))*(b[0])
+print (Line_5)
+
+result = ((a[0]*100)+(a[1]*10)+(a[2]))*((b[0]*100)+(b[1]*10)+(b[2]))
+print (result)
