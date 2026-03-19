@@ -1,0 +1,5 @@
+a = input()
+
+result = bin(int(a, 8)) # 8진수 문자열을 10진수 정수로 변환하고 다시 2진수 문자열로 변환
+
+print(result[2:])
