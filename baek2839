@@ -1,0 +1,14 @@
+a = int(input())
+bag = 0
+sugar = a
+
+while sugar >= 0 :
+    if sugar % 5 == 0 : # 5로 나누어 떨어짐
+        bag += (sugar//5) # 늘어난 3키로 봉지를 추가하여 연산
+        print(bag)
+        break # 5로 나누어 떨어지면 반복문 나가기
+    
+    sugar -= 3 # 3씩빼서 5로 나누어 떨어지는 지 확인
+    bag += 1 # 그에 따라 가방을 하나씩 증가
+
+else: print("-1") # -3을 반복하여도 나누어떨어지지 않는다면 -1 출력
