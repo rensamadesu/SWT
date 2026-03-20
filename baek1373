@@ -1,0 +1,5 @@
+a = input()
+
+result = oct(int(a, 2)) # 입력받은 문자열을 2진수로 변환하고 정수로 변환하여 다시 8진수로 변환
+
+print(result[2:])
