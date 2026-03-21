@@ -1,0 +1,7 @@
+a = int(input())
+total = 0
+for i in range(a) :
+    b, c = map(int, input().split())
+    plus = b + c    
+    total += 1
+    print("Case #",total,(": "),b ," + ", c ," = ", plus, sep='') # sep='' 값들을 연결할 때 아무것도 넣지 말아라(공백 제거)
