@@ -1,0 +1,14 @@
+a, b = map(int,input().split())
+
+real_box = []
+
+for i in range(1, b + 1) :
+    mul = a * i
+    
+
+    stst = str(mul)[::-1] # 한 번에 문자열 뒤집기 
+    
+    real = int(stst) # 바꾼 문자열 다시 정수로 바꾸기
+    real_box.append(real)
+
+print(max(real_box))
