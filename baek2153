@@ -1,0 +1,22 @@
+import math
+
+word = input()
+total = 0
+for char in word :
+    if char.islower() :
+        total += (ord(char) - 96)
+    elif char.isupper() :
+        total += (ord(char) - 38)
+
+prime = True
+
+for i in range(2, int(math.sqrt(total)) + 1) :
+    if total % i == 0 :
+        prime = False 
+        break
+    
+if prime : 
+    print("It is a prime word.")
+
+else:
+    print("It is not a prime word.")
