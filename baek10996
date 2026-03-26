@@ -1,0 +1,7 @@
+a = int(input())
+if a == 1 :
+    print('*')
+else : 
+        for _ in range(a) :
+            print(('* ' * (a - a // 2)).rstrip()) #홀수줄 별 출력할 때 공백이 포인트
+            print(' *' * (a // 2)) #짝수줄
