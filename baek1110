@@ -1,0 +1,20 @@
+a = input()
+zero = '0'
+num = a
+count = 0
+
+if int(a) < 10 :
+    a = (zero + a)
+    num = a
+
+while True :
+    real_num = int(num[0]) + int(num[1]) 
+    numnum = num[1] + str(real_num)[-1]
+    count += 1
+    if numnum == a :
+        break
+    num = numnum 
+    
+print(count)
+
+    
