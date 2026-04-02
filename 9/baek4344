@@ -1,0 +1,12 @@
+test_case = int(input())
+for i in range(test_case) :
+    stu_test = list(map(int, input().split()))  
+    total = sum(stu_test[1:]) 
+    avg = total / stu_test[0]
+    count = 0
+    
+    for score in stu_test[1:] :
+        if avg < score :
+            count += 1
+    rate = (count / stu_test[0]) * 100
+    print(f'{rate:.3f}%')
