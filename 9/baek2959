@@ -1,0 +1,5 @@
+sqaure = list(map(int, input().split()))
+sqaure.sort()
+sqaure.pop()
+result = min(sqaure) * max(sqaure)
+print(result)
