@@ -1,0 +1,26 @@
+a = int(input())
+b = list(map(int, input().split()))
+b.sort()
+total = 0 
+
+for i in range(a) :
+   plus_count = i
+   minus_count = a - 1 - i
+   total += (b[i] * plus_count)
+   total -= (b[i] * minus_count)
+
+print(total * 2) 
+
+
+#정답이긴 하나 시간초과 로직 (너무 많은 시간 소요)
+
+#a = int(input())
+#b = list(map(int, input().split()))
+#b.sort()
+#total = 0 
+
+#for i in b:           
+#    for j in b:       
+#        total += abs(i - j)  
+
+#print(total)
