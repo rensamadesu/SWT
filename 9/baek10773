@@ -1,0 +1,9 @@
+a = int(input())
+result = []
+for i in range(a) :
+    b = int(input())
+    if b == 0 :
+        result.pop()
+    else :
+        result.append(b) 
+print(sum(result))
