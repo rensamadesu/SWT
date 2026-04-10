@@ -1,0 +1,14 @@
+a = int(input())
+card = list(map(int ,input().split()))
+b = int(input())
+targets = list(map(int, input().split()))
+
+count = {}
+for i in card :
+    if i in count :
+        count[i] += 1
+    else :
+        count[i] = 1
+        
+for j in targets :
+    print(count.get(j, 0), end=' ')
