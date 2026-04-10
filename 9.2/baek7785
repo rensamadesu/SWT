@@ -1,0 +1,19 @@
+import sys # 빠른 데이터 입력
+input = sys.stdin.readline
+
+a = int(input())
+com = set()
+
+for i in range(a) :
+    b = list(input().split())
+    
+    if b[1] == "enter" :
+        com.add(b[0])
+    
+    elif b[1] == "leave" :
+        com.remove(b[0])
+
+sorted_com = sorted(com, reverse=True)
+
+for j in sorted_com :
+    print(j)
