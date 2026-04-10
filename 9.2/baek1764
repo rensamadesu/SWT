@@ -1,0 +1,22 @@
+import sys # 빠른 데이터 입력
+input = sys.stdin.readline
+
+a, b = map(int, input().split())
+not_heard = set()
+not_see = set()
+
+for _ in range(a) :
+    person = input().strip()
+    not_heard.add(person)
+    
+for _ in range(b) :
+    person1 = input().strip()
+    not_see.add(person1)
+
+result_person = (not_see & not_heard)
+result_person = sorted(result_person)
+
+print(len(result_person))
+for j in result_person :
+    print(j)
+
