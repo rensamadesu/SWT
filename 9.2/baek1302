@@ -1,0 +1,17 @@
+a = int(input())
+book = {} 
+result = []
+for i in range (a) :
+    b = input()
+    if b in book :
+        book[b] += 1
+    else : 
+        book[b] = 1
+
+max_sales = max(book.values())
+for title, count in book.items() :
+    if max_sales == count :
+        result.append(title)
+
+result.sort()
+print(result[0])
