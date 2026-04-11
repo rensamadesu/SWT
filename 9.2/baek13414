@@ -1,0 +1,14 @@
+import sys
+input = sys.stdin.readline
+
+a, b = map(int, input().split())
+classs = {} 
+
+for i in range (b) :
+    c = input().strip()
+    classs[c] = i
+
+sorted_classs = sorted(classs.items(), key = lambda x: x[1])
+
+for student in sorted_classs[:a] :
+    print(student[0])
