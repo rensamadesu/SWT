@@ -1,0 +1,13 @@
+num = set(range(1, 10001))
+subb = set()
+
+for i in range(1, 10001) :
+    for j in str(i) : 
+        i += int(j)
+        
+    subb.add(i)
+
+result = num - subb 
+
+for i in sorted(result) :
+    print(i)
