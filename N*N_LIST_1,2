@@ -1,3 +1,5 @@
+import random
+
 def mul(N, A, B, C) :
     result = [[0 for _ in range(N)]for _ in range(N)]
     
@@ -20,13 +22,32 @@ def transpose(N, A) :
     
     return transposed
 
+def rand(N) :
+    value = N * N * 10
+    return[[random.randint(1, value - 1) for _ in range(N)] for _ in range(N)]
 
-N = int(input())
+def matrix_print(matrix) :
+    for row in matrix :
+        for val in row :
+            print(f"{val:7}", end= " ")
+        print()
+    print()
+
+
+N = int(input("1보다 크고 5보다 작은 값을 입력하세요"))
+
 if 1 < N <= 5 :
-    A = [[0 for _ in range(N)] for _ in range(N)]
-    B = [[0 for _ in range(N)] for _ in range(N)]
-    C = [[0 for _ in range(N)] for _ in range(N)]
-    print(mul(N, A, B, C))
-    print(transpose(N, A))
+    A = rand(N)
+    B = rand(N)
+    C = rand(N)
+    
+    print("A행렬")
+    matrix_print(A)
+    
+    print("A * B + C")
+    matrix_print(mul(N, A, B, C))
+    
+    print("A행렬의 전치")
+    matrix_print(transpose(N, A))
 else :
-    print("1보다 크고 5보다 작은 정수를 입력하세요")
+    print("종료")
