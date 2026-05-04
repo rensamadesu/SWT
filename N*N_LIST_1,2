@@ -1,0 +1,32 @@
+def mul(N, A, B, C) :
+    result = [[0 for _ in range(N)]for _ in range(N)]
+    
+    for i in range(N) :
+        for j in range(N) :
+            temp_result = 0
+            
+            for k in range(N) :
+                temp_result += A[i][k] * B[k][j]
+            result[i][j] = temp_result + C[i][j]
+    
+    return result
+
+def transpose(N, A) :
+    transposed = [[0 for _ in range(N)] for _ in range(N)]
+    
+    for i in range(N) :
+        for j in range(N) :
+            transposed[j][i] = A[i][j]
+    
+    return transposed
+
+
+N = int(input())
+if 1 < N <= 5 :
+    A = [[0 for _ in range(N)] for _ in range(N)]
+    B = [[0 for _ in range(N)] for _ in range(N)]
+    C = [[0 for _ in range(N)] for _ in range(N)]
+    print(mul(N, A, B, C))
+    print(transpose(N, A))
+else :
+    print("1보다 크고 5보다 작은 정수를 입력하세요")
