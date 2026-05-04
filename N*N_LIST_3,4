@@ -13,15 +13,6 @@ def mul(N, A, B, C) :
     
     return result
 
-def transpose(N, A) :
-    transposed = [[0 for _ in range(N)] for _ in range(N)]
-    
-    for i in range(N) :
-        for j in range(N) :
-            transposed[j][i] = A[i][j]
-    
-    return transposed
-
 def rand(N) :
     value = N * N * 10
     return[[random.randint(1, value - 1) for _ in range(N)] for _ in range(N)]
@@ -46,8 +37,6 @@ if 1 < N <= 5 :
     
     print("A * B + C")
     matrix_print(mul(N, A, B, C))
-    
-    print("A행렬의 전치")
-    matrix_print(transpose(N, A))
+
 else :
     print("종료")
